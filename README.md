@@ -2,18 +2,12 @@
 
 **Prof. Marco Tulio Valente**
 
-Objetivo: colocar em prática os conceitos de refactoring aprendidos na sala de aula. Para isso, o aluno vai realizar alguns refactorings em um sistema hipotético, também usado nos capítulos iniciais do livro do Fowler, que é o livro clássico sobre o tema.
+Objetivo: realizar alguns refactorings em um sistema hipotético, usado no livro do Fowler.
 
-Para tirar proveito do exercício:
+Para tirar proveito do exercício, é importante não apenas seguir o roteiro mecanicamente, mas também pensar nos benefícios que estão sendo alcançados com cada
+refactoring. Em caso de dúvida sobre os refactorings propostos, você pode consultar também o [Capítulo 9](https://engsoftmoderna.info/cap9.html) do nosso livro.
 
-* **É importante não apenas seguir o roteiro mecanicamente, mas também analisar os benefícios alcançados com cada refactoring**. 
-* Ou seja, pense sempre nos motivos que tornam o código refatorado melhor do que o código anterior.
-
-Importante também: o roteiro baseia-se em uma parte (incompleta) de um sistema. Logo, você não vai executá-lo. O nosso foco não está no funcionamento do sistema, mas na melhoria de sua estrutura interna (design) após cada passo do roteiro.
-
-Em caso de dúvida sobre os refactorings propostos, você pode consultar o [Capítulo 9](https://engsoftmoderna.info/cap9.html) do nosso livro.
-
-O exemplo está em Java, mas a sintaxe é familiar mesmo para aqueles que nunca programaram na linguagem. Infelizmente, não é possível fazer em uma outra linguagem, pois a correção será automática. Você pode usar uma IDE Java (Eclipse, NetBeans, IntelliJ) ou então uma IDE online (como [repl.it](https://replit.com/)). **A vantagem de usar o repl.it é que você não precisa realizar nenhuma instalação local na sua máquina e também já dispobilizamos um [exemplo](https://replit.com/@engsoftmoderna/VideoStore) configurado com a versão inicial do sistema usado no roteiro**.
+O exemplo está em Java, mas a sintaxe é familiar mesmo para aqueles que nunca programaram na linguagem. Infelizmente, não é possível fazer em uma outra linguagem, pois a correção será automática. Você pode usar uma IDE Java (Eclipse, NetBeans, IntelliJ) ou então uma IDE online (como repl.it). 
 
 Instruções:
 
@@ -26,7 +20,7 @@ Instruções:
 
 Observações: 
 
-* Os código e refactorings realizados nesta aula prática podem ser usados em nossas aulas e artigos futuros. Evidentemente, sempre de forma anônima (isto é, sem qualquer possibilidade de identificar o aluno ou mesmo a sua turma). Caso você não se sinta à vontade com isso, basta nos enviar um e-mail, solicitando que seu código não seja usado futuramente.
+* Os código e refactorings realizados nesta aula prática podem ser usados em nossas aulas e trabalhos científicos futuros. Evidentemente, sempre de forma totalmente anônima (isto é, sem qualquer possibilidade de identificar os alunos ou mesmo a turma). Caso você não se sinta à vontade com isso, basta nos enviar um e-mail, solicitando que seu código não seja usado futuramente.
 
 * **Códigos que não compilam -- em qualquer um dos refactorings e passos -- serão avaliados com nota zero pelo nosso sistema de correção automática**
 
@@ -36,10 +30,6 @@ Observações:
 As classes que vamos usar fazem parte de um sistema de video-locadora, para aluguel de vídeos.
 
 Inicialmente, são três classes: `Movie` (filmes que podem ser alugados), `Rental` (dados de um aluguel) e `Customer` (clientes da locadora).
-
-Se estiver usando o repl.it, já disponibilizamos esse código inicial pronto: veja [aqui](https://replit.com/@engsoftmoderna/VideoStore).
-
-Se não estiver usando repl.it siga os passos a seguir na sua IDE ou editor favoritos.
 
 * Copie o código da classe `Movie` para um arquivo chamado `Movie.java`:
 ```java
@@ -301,7 +291,7 @@ class Customer ...
 
 ```java
 class Rental ...
-   public int getFrequentRenterPoints() { 
+   public int getFrequentRenterPoints() { {
       //Adicionar o trecho de código extraído.
    }
 ```
@@ -364,7 +354,7 @@ class Customer...
    }
 ```
 
-Dois comentários breves, sobre alguns pontos que você já pode estar pensando sobre os últimos refactorings:
+Dois comentários breve, sobre alguns pontos que você já pode estar pensando sobre os últimos refactorings:
 
 * Eles aumentaram o tamanho do código: porém, também não foi tanto assim ...
 * Eles fizeram com o que o loop de `rentals` seja percorrido três vezes; na primeira versão do código, esse loop era executado uma única vez. Isso vai gerar problemas de performance? Talvez sim; mas, provavelmente na maioria dos casos, não vai fazer diferença, pois um cliente não tem tantos filmes alugados.
